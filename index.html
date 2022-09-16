@@ -78,7 +78,7 @@ if (id) {
 	}
 	$("#payreq").text(request);
 	$("#reason").text(data.message);
-        $("#amount").text(data.amount_BTC + " BTC");
+        $("#amount").text(data.amount_BLK + " BLK");
         $("#paylink").attr("href", URI);
         $("<p />").text("Powered by Electrum").appendTo($("p#powered"));
         $(function () {
@@ -138,10 +138,10 @@ if (id) {
 };
 
 // See http://stackoverflow.com/questions/29186154/chrome-clicking-mailto-links-closes-websocket-connection
-$(document).on('click', 'a[href^="bitcoin:"]', function (e) {
+$(document).on('click', 'a[href^="blackcoin:"]', function (e) {
     e.preventDefault();
-    var btcWindow = window.open($(e.currentTarget).attr('href'));
-    btcWindow.close();
+    var blkWindow = window.open($(e.currentTarget).attr('href'));
+    blkWindow.close();
     return false;
 });
 
